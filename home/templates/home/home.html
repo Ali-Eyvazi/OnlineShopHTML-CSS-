@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block extra_headers %}
+ <link rel="stylesheet" href="{% static 'home/css/style.css'%}"> 
+
+{% endblock %}
+
+
+
+{% block content %}
+    {% if request.user.full_name == 'ali eyvazi' %}
+        <img src="{% static 'home/img/453645646.jpg'%}" href=""> 
+
+        <h3>Hello {{ request.user.full_name }}</h3>
+
+    {% else %}
+
+    <h2>Hello Guest</h2> 
+    {% endif %}
+    
+{% endblock %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+online shop/User Creation
+{% endblock%}
+
+{% block content %}
+    <h3 class="text-center">User Creation</h3>
+        <div class="card">
+            
+            <form action="" class="card-body col-md-3" method="post" novalidate>
+
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Create">
+            </form>
+        </div>
+{% endblock %}
